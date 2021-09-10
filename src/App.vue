@@ -2,7 +2,7 @@
   <div id="app">
     <l-map class="map" :zoom="zoom" :center="center" ref="map">
       <l-tile-layer :url="url"></l-tile-layer>
-      <l-marker :lat-lng="[point.latitude, point.longitude]" v-for="point of points" :key="point.id"/>
+      <l-marker :lat-lng="[point.latitude, point.longitude]" v-for="point of points" :key="point.id" @click="onPointClicked(point)"/>
     </l-map>
     <transition name="fade">
       <button class="btn control-panel__open-button" @click="openPointsList" v-if="!pointsListOpened">Список меток</button>
