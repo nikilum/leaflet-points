@@ -123,7 +123,7 @@ export default {
     },
     onPointClicked(point) {
       this.activePointId = point.id
-      this.$refs.map.mapObject.setView([point.latitude, point.longitude], 5);
+      this.$refs.map.mapObject.setView([point.latitude, point.longitude], 80);
     }
   },
   computed: {
